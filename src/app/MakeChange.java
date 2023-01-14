@@ -8,10 +8,10 @@ public class MakeChange {
 		double itemPrice;
 		double tendered;
 		double change;
+		double cents;
 		int dollars;
-//		double quarter; dime, penny, one dollar, 
-//		5 dollars 10, dollars, 20 dollars
-		
+		int quarters, dimes, nickels, pennies; 
+		int twenties, tens, fives, ones;
 		System.out.print("Enter the price of the item to be purchased: ");
 		itemPrice = sc.nextDouble();
 		sc.nextLine();
@@ -32,22 +32,31 @@ public class MakeChange {
 			else if (itemPrice < tendered) {
 				change = (tendered - itemPrice);
 				dollars = (int) (change);
-						int twenties = dollars / 20;
-						int tens = dollars % 20 /10;
-						int fives = dollars % 20 % 10 / 5;
-						int ones= dollars % 20 % 10 % 5 /1;
-				System.out.println(twenties + " " +tens + " " + " "  + fives+ones);		
-						
-				double cents = change * 100 % 100;
+						twenties = dollars / 20;
+						tens = dollars % 20 /10;
+						fives = dollars % 20 % 10 / 5;
+						ones= dollars % 20 % 10 % 5 /1;
+						cents = change - dollars;
+				System.out.println(twenties + " " +tens + " " + " "  + fives+ ones);		
+//				 Need if statements so that these do not print zeros for unneeded denominations
 				
-//				16.75 *100 % 100
-//				System.out.printf("%.2f", change);
+				
+				double dot25 = cents / .25;
+				quarters = (int) dot25;
+				double  dot10= cents % .25 / .10;
+				dimes = (int) dot10;
+				double dot5 = cents % .25 % .10 /.05;
+				nickels = (int) dot5;
+				double dot1 = cents % .25 % .10 % .05 / .01;
+				pennies = (int) dot1;
+				
+				System.out.println(quarters + " "+ dimes+ " " +" "+ nickels+ " "+ pennies);
+				
 			}
 			
-		
+	
+			sc.close();
 	}
+	
 
 }
-// itemPrice = 15 tendered = 20 result is 5 change.
-// price 13.10 tendered 14 3 quarters 1 dime 1 nickel.
-// price 6.37 tendered 10 3 one dollar bills, 3 pennies,  2 quarters one dime 
