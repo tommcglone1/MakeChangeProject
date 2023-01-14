@@ -8,6 +8,9 @@ public class MakeChange {
 		double itemPrice;
 		double tendered;
 		double change;
+		int dollars;
+//		double quarter; dime, penny, one dollar, 
+//		5 dollars 10, dollars, 20 dollars
 		
 		System.out.print("Enter the price of the item to be purchased: ");
 		itemPrice = sc.nextDouble();
@@ -27,9 +30,18 @@ public class MakeChange {
 			}
 			
 			else if (itemPrice < tendered) {
-				change = tendered - itemPrice;
+				change = (tendered - itemPrice);
+				dollars = (int) (change);
+						int twenties = dollars / 20;
+						int tens = dollars % 20 /10;
+						int fives = dollars % 20 % 10 / 5;
+						int ones= dollars % 20 % 10 % 5 /1;
+				System.out.println(twenties + " " +tens + " " + " "  + fives+ones);		
+						
+				double cents = change * 100 % 100;
 				
-				System.out.println(change);
+//				16.75 *100 % 100
+//				System.out.printf("%.2f", change);
 			}
 			
 		
