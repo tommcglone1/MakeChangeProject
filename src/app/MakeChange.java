@@ -6,7 +6,9 @@ public class MakeChange {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
+		
+	for(int i = 0; i <=100; i++) {	
+	
 		double itemPrice; double tendered; double change; double cents;
 		int dollars, twenties, tens, fives, ones;
 		int quarters, dimes, nickels, pennies; 
@@ -60,11 +62,15 @@ public class MakeChange {
 			dot1 = (dot1 + .005);
 			pennies = (int) dot1;
 			penniesOptions(pennies);
-		
+			
+			System.out.println();
+			System.out.println();
 		
 		}
-		sc.close();
+		
 	}
+	sc.close();
+}
 
 
 	public static void penniesOptions(int $pennies) {
@@ -180,22 +186,14 @@ public class MakeChange {
 	public static void lessAndEqual(double price, double customerTender) {
 		if (price > customerTender) {
 			System.err.println("Amount tendered does not cover cost of item." + " Please provide sufficient amount.");
+			System.out.println();
 		}
 
 		else if (price % customerTender == 0) {
 			System.out.println("Exact amount tendered. No change required.");
+			System.out.println();
 		}
 
 	}
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
