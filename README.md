@@ -15,10 +15,10 @@ Java, Eclipse
 
 # Lessons Learned
 
-One lesson I learned was how to use arithmetic expressions like the modulator and division to my advantage to achieve the outcome desired for a program. 
+One lesson I learned was how to use arithmetic expressions like the modulator and division to achieve the outcome desired for a program. 
 
-Another lesson I learned was the situations in which casting is necessary, and truncation can be used to help you. 
+Another lesson I learned was the situations in which casting is necessary and truncation can be used to my advantage. 
 
-A third lesson I learned was how to nest if / else if statements something I was previously confused about. 
+A third lesson I learned was how to nest if / if else statements. This was something I was previously confused about. 
 
 Finally, I learned how to create and use methods properly. Something that will be very useful throughout my time as a programmer to achieve better readability and spacing throughout my code. 
